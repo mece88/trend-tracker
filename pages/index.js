@@ -1,5 +1,18 @@
 import Head from "next/head";
+import Link from 'next/link';
 
+export default function Navbar() {
+  return (
+    <nav className="w-full bg-blue-700 text-white py-4 px-6 flex justify-between items-center">
+      <h1 className="text-2xl font-bold">🚀 Trend Tracker</h1>
+      <div className="flex space-x-6">
+        <Link href="/" className="hover:underline">Home</Link>
+        <Link href="/about" className="hover:underline">About</Link>
+        <Link href="/contact" className="hover:underline">Contact</Link>
+      </div>
+    </nav>
+  );
+}
 export default function Home() {
   return (
     <>
@@ -10,6 +23,7 @@ export default function Home() {
           content="Track the latest trending keywords and product ideas on Etsy, eBay, Amazon, and Twitter in real-time."
         />
       </Head>
+      <Navbar />
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
         <header className="w-full bg-blue-700 text-white py-6 text-center text-3xl font-bold">
           🚀 Trend Tracker - Discover What's Hot!
